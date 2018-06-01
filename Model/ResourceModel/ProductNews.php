@@ -22,7 +22,6 @@ class ProductNews extends AbstractDb
      */
     protected function _construct()
     {
-        parent::_construct();
         $this->_init(ProductNewsInterface::ENTITY, ProductNewsInterface::ENTITY_ID);
     }
 }

@@ -9,5 +9,13 @@
                 <item name="sortOrder" xsi:type="number">5</item>
             </item>
         </argument>
+        <insertListing>
+            <argument name="data" xsi:type="array">
+                    <item name="config" xsi:type="array">
+                        <item name="autoRender" xsi:type="boolean">true</item>
+                        <item name="ns" xsi:type="string">product_news_listing</item>
+                    </item>
+            </argument>
+        </insertListing>
     </fieldset>
 </form>
