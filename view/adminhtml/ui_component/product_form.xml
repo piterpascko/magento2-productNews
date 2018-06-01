@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
+    <fieldset name="product_news_tab">
+        <argument name="data" xsi:type="array">
+            <item name="config" xsi:type="array">
+                <item name="label" xsi:type="string" translate="true">Product News</item>
+                <item name="collapsible" xsi:type="boolean">true</item>
+                <item name="sortOrder" xsi:type="number">5</item>
+            </item>
+        </argument>
+        <insertListing>
+            <argument name="data" xsi:type="array">
+                    <item name="config" xsi:type="array">
+                        <item name="autoRender" xsi:type="boolean">true</item>
+                        <item name="ns" xsi:type="string">product_news_listing</item>
+                    </item>
+            </argument>
+        </insertListing>
+    </fieldset>
+</form>
