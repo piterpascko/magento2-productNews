@@ -1,0 +1,7 @@
+<a
+    class="action-menu-item"
+    repeat="foreach: $col.getVisibleActions($row()._rowIndex), item: '$action'"
+    click="showModal.bind($row())"
+    text="$action().label"
+    attr="target: $col.getTarget($action())"
+/>

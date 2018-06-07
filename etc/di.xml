@@ -22,4 +22,14 @@
             <argument name="resourceModel" xsi:type="string">SSS\ProductNews\Model\ResourceModel\ProductNews</argument>
         </arguments>
     </type>
+    <virtualType name="Magento\Catalog\Ui\DataProvider\Product\Form\Modifier\Pool">
+        <arguments>
+            <argument name="modifiers" xsi:type="array">
+                <item name="product_news_tab" xsi:type="array">
+                    <item name="class" xsi:type="string">SSS\ProductNews\Ui\DataProvider\ProductNews\Listing\DataProvider</item>
+                    <item name="sortOrder" xsi:type="number">20</item>
+                </item>
+            </argument>
+        </arguments>
+    </virtualType>
 </config>

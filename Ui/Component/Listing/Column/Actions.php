@@ -22,8 +22,8 @@ class Actions extends Column
         foreach ($dataSource['data']['items'] as &$item) {
             $item[$this->getData('name')]['edit'] = [
                 'href' => $this->context->getUrl(
-                    'product/news/edit',
-                    ['news_id' => $item['news_id'], 'product_id' => $item['product_id']]
+                    'productnews/edit/news',
+                    ['news_id' => $item['news_id'], 'product_id' => $item['product_id'], 'entity_id' => 1]
                 ),
                 'label' => __('Edit'),
                 'hidden' => false,

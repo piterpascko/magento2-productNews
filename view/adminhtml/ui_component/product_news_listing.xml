@@ -11,15 +11,17 @@
     <dataSource name="product_news_listing_data_source">
         <argument name="dataProvider" xsi:type="configurableObject">
             <argument name="class" xsi:type="string">ProductNewsGridDataProvider</argument>
-            <argument name="name" xsi:type="string">product_news_listing_data_source</argument>
+             <argument name="name" xsi:type="string">product_news_listing_data_source</argument>
             <argument name="primaryFieldName" xsi:type="string">news_id</argument>
             <argument name="requestFieldName" xsi:type="string">news_id</argument>
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
+                    <item name="extendProvider" xsi:type="string">product_form.product_form_data_source</item>
                     <item name="component" xsi:type="string">Magento_Ui/js/grid/provider</item>
                     <item name="update_url" xsi:type="url" path="mui/index/render"/>
                     <item name="storageConfig" xsi:type="array">
                         <item name="indexField" xsi:type="string">news_id</item>
+                        <item name="product_id" xsi:type="string">${$.externalProvider}:data.product.current_product_id</item>
                     </item>
                 </item>
             </argument>
@@ -115,6 +117,8 @@
         <actionsColumn name="actions" class="SSS\ProductNews\Ui\Component\Listing\Column\Actions">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
+                    <item name="component" xsi:type="string">SSS_ProductNews/js/modal-edit</item>
+                    <item name="bodyTmpl" xsi:type="string">SSS_ProductNews/editAction</item>
                     <item name="resizeEnabled" xsi:type="boolean">false</item>
                     <item name="resizeDefaultWidth" xsi:type="string">107</item>
                     <item name="indexField" xsi:type="string">news_id</item>
